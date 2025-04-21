@@ -4,17 +4,29 @@
   <meta charset="UTF-8">
   <title>Mein Wiki</title>
   <script src="marked.min.js"></script> <!-- Lokale Version -->
-  <link rel="stylesheet" href="style.css"> <!-- CSS ausgelagert -->
+  <link rel="stylesheet" href="style.css"> <!-- Externe CSS-Datei -->
 </head>
 <body>
 
-<nav>
-  <a href="#start">Startseite</a>
-  <a href="#seite1">Seite 1</a>
-  <a href="#seite2">Seite 2</a>
-</nav>
+<header>
+  <h1>Mein Wiki</h1>
+</header>
 
-<div id="content">Lade Inhalt...</div>
+<div class="container">
+  <nav>
+    <a href="#start">Startseite</a>
+    <a href="#seite1">Seite 1</a>
+    <a href="#seite2">Seite 2</a>
+  </nav>
+
+  <main id="content">
+    Lade Inhalt...
+  </main>
+</div>
+
+<footer>
+  © 2025 Mein Wiki. Alle Rechte vorbehalten.
+</footer>
 
 <script>
 async function ladeMarkdown(dateiname) {
