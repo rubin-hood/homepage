@@ -55,9 +55,15 @@ nav a:hover {
 /* Hauptinhalt */
 main#content {
   flex-grow: 1;
-  padding: 20rem;
+  padding: 2rem;
   overflow-y: auto;
   background-color: #F6F5F1;
+}
+
+/* Inhalt begrenzen */
+main#content > div {
+  width: 100%;
+  max-width: 800px; /* Begrenzung wie bei ChatGPT */
 }
 
 /* Footer */
