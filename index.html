@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Mein Wiki</title>
+  <script src="marked.min.js"></script> <!-- Lokale Version von marked.js -->
+  <style>
+    body { font-family: sans-serif; margin: 2rem; }
+    nav a { margin-right: 1rem; color: purple; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#start">Startseite</a>
+  <a href="#seite1">Seite 1</a>
+  <a href="#seite2">Seite 2</a>
+</nav>
+
+<div id="content">Lade Inhalt...</div>
+
+<script>
+async function ladeMarkdown(dateiname) {
+  try {
+    const response = await fetch(dateiname);
+    if (!response.ok) throw new Error("HTTP-Fehler " + response.status);
+
+    const text = await response.text();
+    document.getElementById('content').innerHTML = marked.parse(text);
+  } catch (error) {
+    document.getElementById('content').innerHTML = "<p>Fehler beim Laden der Seite: " + dateiname + "</p>";
+    console.error(error);
+  }
+}
+
+function router() {
+  const hash = location.hash.substring(1) || 'start';
+  ladeMarkdown(hash + '.md');
+}
+
+// Event-Listener
+window.addEventListener('hashchange', router);
+window.addEventListener('load', router);
+</script>
+
+</body>
+</html>
