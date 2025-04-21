@@ -3,7 +3,14 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Sidebar */
@@ -80,7 +87,7 @@ body {
   display: flex;
   flex: 1;
   margin-left: 300px;
-  width: 100%;
+  width: calc(100% - 300px);
   min-height: 100vh;
 }
 
@@ -90,6 +97,7 @@ body {
   background: #f6f5f1;
   padding: 2rem;
   word-break: break-word;
+  font-size: 1rem;
 }
 
 /* Rechte Seite */
@@ -97,6 +105,17 @@ body {
   background-color: #e5c02c;
   width: 100px;
   min-width: 100px;
+}
+
+/* Footer */
+.footer {
+  background-color: #009c6c;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  position: relative;
+  width: 100%;
 }
 
 /* Mobile Menü Button */
@@ -130,9 +149,22 @@ body {
   .main-wrapper {
     margin-left: 0;
     flex-direction: column;
+    width: 100%;
   }
 
   .right-space {
     display: none;
+  }
+
+  #content {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #content {
+    padding: 3rem;
+    font-size: 1.1rem;
   }
 }
