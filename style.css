@@ -69,7 +69,7 @@ main#content img {
   margin: 1rem 0; /* (optional: schöner Abstand oben/unten) */
 }
 
-/* Zusätzlich: Code-Blöcke schön machen */
+/* Zusätzlich: Code-Blöcke schön machen
 main#content pre {
   overflow-x: auto;
   background: #eee;
@@ -77,12 +77,13 @@ main#content pre {
   border-radius: 6px;
 }
 
-/* Und: Inline-Code */
+/* Und: Inline-Code
 main#content code {
   background: #eee;
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
 }
+*/
 
 /* Footer */
 footer {
