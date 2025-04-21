@@ -53,14 +53,6 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Hauptinhalt */
-main#content {
-  flex-grow: 1;
-  padding: 2rem;
-  overflow-y: auto;
-  background-color: #CCC;
-}
-
 main#content {
   flex-grow: 1;
   padding: 2rem;
@@ -69,6 +61,12 @@ main#content {
   max-width: 800px; /* oder wie breit du willst */
 }
 
+main#content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem 0; /* (optional: schöner Abstand oben/unten) */
+}
 
 /* Footer */
 footer {
