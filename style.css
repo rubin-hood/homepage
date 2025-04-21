@@ -5,6 +5,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #F6F5F1; /* <-- Hintergrundfarbe für ganze Seite */
 }
 
 /* Header */
@@ -57,14 +58,17 @@ main#content {
   flex-grow: 1;
   padding: 2rem;
   overflow-y: auto;
-  background-color: #F6F5F1;
+  background-color: #CCC;
 }
 
-/* Inhalt begrenzen */
-main#content > div {
-  width: 100%;
-  max-width: 800px; /* Begrenzung wie bei ChatGPT */
+main#content {
+  flex-grow: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  background-color: #CCC;
+  max-width: 800px; /* oder wie breit du willst */
 }
+
 
 /* Footer */
 footer {
