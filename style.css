@@ -35,7 +35,7 @@ header {
 
 /* Navigation */
 nav {
-  width: 600px;
+  width: 400px;
   background: #F6F5F1;
   padding: 1rem;
   /*Sbox-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);*/
@@ -57,7 +57,7 @@ main#content {
   flex-grow: 1;
   padding: 2rem;
   overflow-y: auto;
-  background-color: #CCC;
+  background-color: #F6F5F1;
   max-width: 800px; /* oder wie breit du willst */
   word-break: break-word;
 }
