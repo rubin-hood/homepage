@@ -2,121 +2,41 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Mein Wiki</title>
-  <script src="marked.min.js"></script> <!-- Lokale Version -->
-  <link rel="stylesheet" href="style.css"> <!-- Externe CSS-Datei -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rubin Hood Wiki</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="marked.min.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
 
-<div class="container">
-  <nav>
-    <div class="logo-header">
-      <img src="logo/rubinhood.png" alt="Logo" class="logo">
-    </div>
+<!-- Sidebar -->
+<nav class="sidebar">
+  <div class="logo-header">
+    <img src="logo/rubinhood.png" alt="Rubin Hood Logo" class="logo">
+  </div>
+  <div class="nav-links">
+    <a href="#start">Startseite</a>
+    <a href="#solution">Solution</a>
+    <a href="#solution2">Solution</a>
+    <a href="#solution3">Solution</a>
+    <a href="#solution4">Solution</a>
+  </div>
+</nav>
 
-    <div class="custom-scroll-container">
-      <div class="nav-links">
-        <a href="#start">Startseite</a>
-        <a href="#Solution">Solution</a>
-        <!-- sehr viele Links -->
-        <!-- alle deine Solutions hier -->
-        <!-- ich kürze, aber du kannst beliebig viele Links einfügen -->
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <a href="#Weitere-Seite">Solution</a>
-        <!-- usw. -->
-      </div>
-    </div>
+<!-- Mobile Menu Button -->
+<button class="menu-toggle" aria-label="Menü öffnen">&#9776;</button>
 
-  </nav>
+<!-- Overlay -->
+<div class="overlay"></div>
 
+<!-- Hauptbereich -->
+<div class="main-wrapper">
   <main id="content">
     Lade Inhalt...
   </main>
+  <div class="right-space"></div>
 </div>
-
-
-
-<script>
-async function ladeMarkdown(dateiname) {
-  try {
-    const response = await fetch(dateiname);
-    if (!response.ok) throw new Error("HTTP-Fehler " + response.status);
-
-    const text = await response.text();
-    document.getElementById('content').innerHTML = marked.parse(text);
-  } catch (error) {
-    document.getElementById('content').innerHTML = "<p>Fehler beim Laden der Seite: " + dateiname + "</p>";
-    console.error(error);
-  }
-}
-
-function router() {
-  const hash = location.hash.substring(1) || 'start';
-  ladeMarkdown(hash + '.md');
-}
-
-window.addEventListener('hashchange', router);
-window.addEventListener('load', router);
-</script>
-
-<footer>
-  <p>© 2025 Mein Wiki – Alle Rechte vorbehalten.</p>
-</footer>
 
 </body>
 </html>

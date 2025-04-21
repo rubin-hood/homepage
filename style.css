@@ -3,155 +3,136 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   display: flex;
-  flex-direction: column;
   min-height: 100vh;
-  background-color: #e5c02c;
 }
 
-/* Container für Navigation und Content */
-.container {
-  display: flex;
-  flex: 1;
-  min-height: 0;
-}
-
-/* Navigation */
-nav {
-  width: 400px;
-  background: #70d9e0;
+/* Sidebar */
+.sidebar {
+  background-color: #70d9e0;
+  width: 300px;
+  min-width: 300px;
+  height: 100vh;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
 }
 
-/* Logo */
+/* Sidebar Inhalte */
 .logo-header {
   display: flex;
-  align-items: center;
+  justify-content: center;
   margin-bottom: 2rem;
 }
 
 .logo {
-  height: 120px;
+  height: 100px;
 }
 
-/* Scroll-Container */
-.custom-scroll-container {
-  position: relative;
-  width: 100%;
-  height: calc(100vh - 200px); /* Höhe minus Logo */
-  overflow-y: auto; /* Automatisches Scrollen, Scrollbar sichtbar bei Bedarf */
-}
-
-/* Links */
 .nav-links {
-  height: 100%;
-  overflow-y: auto;
-  padding-right: 0px; /* KEIN extra padding */
   display: flex;
   flex-direction: column;
-
-  /* Firefox Scrollbar */
-  scrollbar-width: auto; /* Auto statt thin */
-  scrollbar-color: #000 #70d9e0; /* Schwarz auf Türkis */
+  gap: 1rem;
 }
 
-/* Links Styling */
 .nav-links a {
-  display: block;
-  margin-bottom: 1rem;
-  color: #009C6C;
+  color: #009c6c;
   text-decoration: none;
-  padding: 0.5rem;
   text-align: center;
+  font-size: 1.1rem;
 }
 
 .nav-links a:hover {
   text-decoration: underline;
 }
 
-/* Chrome, Edge, Safari Scrollbar */
-.nav-links::-webkit-scrollbar {
-  width: 16px;
+/* Mobile Sidebar */
+.sidebar.closed {
+  transform: translateX(-100%);
 }
 
-.nav-links::-webkit-scrollbar-thumb {
-  background-color: #000;
-  border-radius: 8px;
-  border: 3px solid #70d9e0; /* Der Trick! So passt der Daumen sauber rein */
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 900;
 }
 
-.nav-links::-webkit-scrollbar-track {
-  background: #70d9e0;
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
 }
 
-/* Content Bereich */
-main#content {
-  flex-grow: 1;
+/* Hauptbereich */
+.main-wrapper {
+  display: flex;
+  flex: 1;
+  margin-left: 300px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Hauptinhalt */
+#content {
+  flex: 1;
+  background: #f6f5f1;
   padding: 2rem;
-  overflow-y: auto;
-  background-color: #F6F5F1;
-  max-width: 800px;
   word-break: break-word;
 }
 
-main#content img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 1rem 0;
+/* Rechte Seite */
+.right-space {
+  background-color: #e5c02c;
+  width: 100px;
+  min-width: 100px;
 }
 
+/* Mobile Menü Button */
+.menu-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  z-index: 1100;
+  cursor: pointer;
+  color: black;
+  display: none;
+}
 
-
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
-  .container {
+  .menu-toggle {
+    display: block;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .main-wrapper {
+    margin-left: 0;
     flex-direction: column;
   }
 
-  nav {
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    background: #eaa76d;
-  }
-
-  .custom-scroll-container {
-    height: auto;
-    overflow: visible;
-  }
-
-  .nav-links {
-    flex-direction: row;
-    flex-wrap: wrap;
-    overflow-y: visible;
-    padding-right: 0;
-  }
-
-  .nav-links a {
-    margin: 0.5rem;
-    padding: 0.5rem 1rem;
-  }
-}
-
-
-
-
-/* Footer */
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
-@media (max-width: 768px) {
-  footer {
-    font-size: 0.8rem;
-    padding: 0.5rem;
+  .right-space {
+    display: none;
   }
 }
