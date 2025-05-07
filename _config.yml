@@ -1,5 +1,5 @@
-title: "Mein Obsidian Blog"
+title: "Rubin Hood"
 description: "Mit Jekyll & GitHub Pages veröffentlicht"
-theme: minima
+theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
