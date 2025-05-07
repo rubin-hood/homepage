@@ -1,5 +1,5 @@
 title: "Rubin Hood"
 description: "Mit Jekyll & GitHub Pages veröffentlicht"
-theme: jekyll-theme-cayman
+theme: minima
 plugins:
   - jekyll-feed
