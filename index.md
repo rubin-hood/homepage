@@ -1,6 +1,8 @@
 ---
-layout: home
+layout: default
 title: Willkommen
 ---
 
 Dies ist meine Homepage mit Beiträgen aus Obsidian.
+
+
