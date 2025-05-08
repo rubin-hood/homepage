@@ -1,6 +1,5 @@
 ---
 layout: home
-title: Home
 title: Blog
 title: About
 title: My Projects
