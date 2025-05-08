@@ -3,3 +3,14 @@ description: "© 2025 Rubin-Hood"
 theme: minima
 plugins:
   - jekyll-feed
+
+
+navigation:
+  - title: Home
+    url: /
+  - title: Blog
+    url: /blog/
+  - title: About
+    url: /about/
+  - title: My Projects
+    url: /projects/
