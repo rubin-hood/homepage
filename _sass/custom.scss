@@ -1,97 +1,105 @@
+/* Hintergrundfarbe der gesamten Seite */
 body {
-  background-color: #F6F5F1; // oder jede gewünschte Farbe
+  background-color: #F6F5F1; /* Heller Beigeton – wirkt freundlich und modern */
 }
 
+/* Container für Header-Elemente wie Logo und Text */
 .header-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+  display: flex;              /* Elemente nebeneinander anordnen */
+  align-items: center;        /* Vertikal zentrieren */
+  gap: 1rem;                  /* Abstand zwischen den Elementen (z. B. Logo und Text) */
 }
 
+/* Bild im Logo-Bereich */
 .site-logo img {
-  height: 120px;
-  width: auto;
+  height: 120px;              /* Höhe des Logos festlegen */
+  width: auto;                /* Breite proportional anpassen */
 }
 
+/* Text im Logo-Bereich (falls z. B. Titel und Untertitel) */
 .site-text {
-  display: flex;
-  flex-direction: column;
+  display: flex;              /* Flexbox verwenden */
+  flex-direction: column;     /* Textzeilen untereinander anordnen */
 }
 
+/* Oberster Header-Bereich (Wrapper) */
 .site-header {
-  border-top: none;
-  padding-top: 1.5rem; // Abstand nach oben, z. B. 1.5rem = 24px
+  border-top: none;           /* Kein Rahmen oben */
+  padding-top: 1.5rem;        /* Abstand vom oberen Rand der Seite */
 }
 
-
-
-
-
+/* Wrapper für alle Header-Inhalte inkl. Navigation */
 .site-header-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 1rem 1.5rem; // rechts & links etwas Luft
-  padding-top: 2rem; /* vorher war nur padding: 1rem 1.5rem; */
+  display: flex;              /* Flexbox aktivieren */
+  justify-content: space-between; /* Abstand zwischen Logo/Text und Navigation */
+  align-items: center;        /* Vertikal zentrieren */
+  flex-wrap: wrap;            /* Umbruch ermöglichen, falls nötig */
+  padding: 2rem 1.5rem;       /* Oben 2rem Abstand, rechts/links je 1.5rem */
+  position: relative;         /* Grundlage für absolute Positionierung von Unterelementen */
 }
 
-  position: relative;
-}
-
+/* Größe und Abstand des Logos (nicht das Bild selbst) */
 .site-logo {
-  height: 48px;
-  margin-right: 0.5rem;
+  height: 48px;               /* Höhe des Logo-Containers */
+  margin-right: 0.5rem;       /* Abstand zum nächsten Element */
 }
 
+/* Titel-Text (z. B. Webseitenname) neben dem Logo */
 .site-title {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: inherit;
-  font-size: 1.5rem;
-  margin-left: 0.5rem; // sorgt für Abstand zwischen Bild und Text
+  display: flex;              /* Flexbox verwenden */
+  align-items: center;        /* Vertikal zentrieren */
+  text-decoration: none;      /* Kein Unterstrich beim Link */
+  color: inherit;             /* Schriftfarbe vom übergeordneten Element übernehmen */
+  font-size: 1.5rem;          /* Schriftgröße */
+  margin-left: 0.5rem;        /* Abstand zwischen Bild und Text */
 }
 
+/* Kontrollkästchen zur Navigation (wird über Label gesteuert) – hier ausgeblendet */
 .nav-toggle {
-  display: none;
+  display: none;              /* Nicht sichtbar */
 }
 
+/* Burger-Menü-Icon für Mobile (nur bei kleinen Bildschirmen sichtbar) */
 .nav-toggle-label {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  position: absolute;
-  top: 1.2rem;
-  right: 1rem;
+  display: none;              /* Standardmäßig ausblenden */
+  font-size: 2rem;            /* Größe des Icons */
+  cursor: pointer;            /* Zeiger beim Überfahren */
+  position: absolute;         /* Absolut relativ zum .site-header-wrapper */
+  top: 1.2rem;                /* Position von oben */
+  right: 1rem;                /* Position von rechts */
 }
 
+/* Hauptnavigation im Header */
 .site-nav {
-  display: flex;
-  gap: 1.5rem;
+  display: flex;              /* Navigation horizontal anordnen */
+  gap: 1.5rem;                /* Abstand zwischen Links */
 }
 
+/* Responsive Design: Für Bildschirmbreiten unter 768px */
 @media (max-width: 768px) {
+
+  /* Burger-Menü-Label bei kleinen Bildschirmen anzeigen */
   .nav-toggle-label {
-    display: block;
+    display: block;           /* Jetzt sichtbar */
   }
 
+  /* Mobile Navigation (ausgeklappt) – Standard: versteckt */
   .site-nav {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    right: 1rem;
-    top: 3.5rem;
-    background-color: #fff;
-    padding: 1rem 2rem;
-    border: 1px solid #ddd;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    z-index: 999;
+    display: none;            /* Erstmal ausblenden */
+    flex-direction: column;   /* Untereinander anordnen */
+    position: absolute;       /* Positioniert sich relativ zum .site-header-wrapper */
+    right: 1rem;              /* Abstand zum rechten Rand */
+    top: 3.5rem;              /* Abstand zum oberen Rand */
+    background-color: #fff;   /* Weißer Hintergrund */
+    padding: 1rem 2rem;       /* Innenabstand */
+    border: 1px solid #ddd;   /* Hellgrauer Rahmen */
+    border-radius: 0.5rem;    /* Abgerundete Ecken */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+    z-index: 999;             /* In den Vordergrund bringen */
   }
 
+  /* Wenn das Burger-Menü aktiviert ist: Navigation einblenden */
   .nav-toggle:checked + .nav-toggle-label + .site-nav {
-    display: flex;
+    display: flex;            /* Jetzt wird die Navigation angezeigt */
   }
 }
-
