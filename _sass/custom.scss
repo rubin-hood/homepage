@@ -38,16 +38,15 @@ body {
 
 .site-logo {
   height: 48px;
-  vertical-align: middle;
   margin-right: 10px;
 }
 
 .site-title {
   display: flex;
   align-items: center;
-  font-size: 1.4rem;
   text-decoration: none;
   color: inherit;
+  font-size: 1.5rem;
 }
 
 .nav-toggle {
@@ -58,6 +57,9 @@ body {
   display: none;
   font-size: 2rem;
   cursor: pointer;
+  position: absolute;
+  top: 1.2rem;
+  right: 1rem;
 }
 
 .site-nav {
@@ -74,8 +76,8 @@ body {
     display: none;
     flex-direction: column;
     position: absolute;
-    right: 0;
-    top: 100%;
+    right: 1rem;
+    top: 3.5rem;
     background-color: #fff;
     padding: 1rem 2rem;
     border: 1px solid #ddd;
@@ -88,3 +90,4 @@ body {
     display: flex;
   }
 }
+
