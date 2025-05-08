@@ -1,0 +1,11 @@
+/* Entfernt die schwarze Linie oben */
+.site-header {
+  border-top: none;
+  background-color: white; /* oder eine andere Farbe */
+}
+
+/* Optional: Logo und Text ausrichten */
+.site-title img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
