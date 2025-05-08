@@ -29,9 +29,10 @@ body {
 
 .site-header-wrapper {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .site-logo {
@@ -63,14 +64,21 @@ body {
   .site-nav {
     display: none;
     flex-direction: column;
-    width: 100%;
-    margin-top: 1rem;
+    align-items: flex-end;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
   }
 
   .nav-toggle:checked + .nav-toggle-label + .site-nav {
     display: flex;
   }
 }
+
 
 
 
