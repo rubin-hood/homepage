@@ -32,13 +32,13 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 1rem 0;
+  padding: 1rem 1.5rem; // rechts & links etwas Luft
   position: relative;
 }
 
 .site-logo {
   height: 48px;
-  margin-right: 10px;
+  margin-right: 0.75rem;
 }
 
 .site-title {
@@ -47,6 +47,7 @@ body {
   text-decoration: none;
   color: inherit;
   font-size: 1.5rem;
+  margin-left: 0.5rem; // sorgt für Abstand zwischen Bild und Text
 }
 
 .nav-toggle {
