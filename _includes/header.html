@@ -1,19 +1,11 @@
-
-<header class="site-header" role="banner">
-  <div class="wrapper">
-    <a class="site-title" rel="author" href="{{ '/' | relative_url }}">
-      <img src="{{ '/logo/rubinhood.png' | relative_url }}" alt="Logo" style="height:60px; vertical-align:middle;">
-      {{ site.title }}
+<header class="site-header">
+  <div class="wrapper header-wrapper">
+    <a href="{{ "/" | relative_url }}" class="site-logo">
+      <img src="{{ "/logo/rubinhood.png" | relative_url }}" alt="Logo">
     </a>
-
-    {% if site.pages %}
-    <nav class="site-nav">
-      {% for my_page in site.pages %}
-        {% if my_page.title and my_page.nav != false %}
-        <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title }}</a>
-        {% endif %}
-      {% endfor %}
-    </nav>
-    {% endif %}
+    <div class="site-text">
+      <h1 class="site-title">{{ site.title | escape }}</h1>
+      <p class="site-description">{{ site.description | escape }}</p>
+    </div>
   </div>
 </header>
