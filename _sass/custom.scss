@@ -12,7 +12,7 @@ body {
 
 /* Bild im Logo-Bereich */
 .site-logo img {
-  height: 200px;              /* Höhe des Logos festlegen */
+  height: 1px;              /* Höhe des Logos festlegen */
   width: auto;                /* Breite proportional anpassen */
 }
 
@@ -40,7 +40,7 @@ body {
 
 /* Größe und Abstand des Logos (nicht das Bild selbst) */
 .site-logo {
-  height: 8px;               /* Höhe des Logo-Containers */
+  height: 200px;               /* Höhe des Logo-Containers */
   margin-right: 0.5rem;       /* Abstand zum nächsten Element */
 }
 
