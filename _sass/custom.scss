@@ -24,13 +24,50 @@ body {
 }
 
 
-.site-nav {
-  background-color: #f8f8f8; // gleiche Farbe wie body
-  border: 1px solid #ddd;
-  border-radius: 6px;
+
+// Navigation //
+
+.site-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.site-nav .page-link {
-  color: #000;
+.site-logo {
+  height: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
 }
+
+.nav-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  display: none;
+  cursor: pointer;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .site-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .site-nav.open {
+    display: flex;
+  }
+}
+
 
