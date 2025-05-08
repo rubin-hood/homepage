@@ -1,11 +1,11 @@
 ---
 layout: home
 title: Home
-  - title: Blog
+title: Blog
     url: /blog/
-  - title: About
+title: About
     url: /about/
-  - title: My Projects
+title: My Projects
     url: /projects/
 ---
 
