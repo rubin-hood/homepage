@@ -1,3 +1,10 @@
+{% if site.minima.social_links %}
+  {% assign social_links = site.minima.social_links %}
+{% endif %}
+
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+
 <header class="site-header" role="banner">
   <div class="wrapper">
     <a class="site-title" rel="author" href="{{ '/' | relative_url }}">
