@@ -10,7 +10,11 @@ body {
   gap: 1rem;                  /* Abstand zwischen den Elementen (z. B. Logo und Text) */
 }
 
-
+/* Bild im Logo-Bereich */
+.site-logo img {
+  height: 1px;              /* Höhe des Logos festlegen */
+  width: auto;                /* Breite proportional anpassen */
+}
 
 /* Text im Logo-Bereich (falls z. B. Titel und Untertitel) */
 .site-text {
@@ -30,7 +34,7 @@ body {
   justify-content: space-between; /* Abstand zwischen Logo/Text und Navigation */
   align-items: center;        /* Vertikal zentrieren */
   flex-wrap: wrap;            /* Umbruch ermöglichen, falls nötig */
-  padding: 2rem 1.5rem;       /* Oben 2rem Abstand, rechts/links je 1.5rem */
+  padding: 1rem 1.5rem;       /* Oben 2rem Abstand, rechts/links je 1.5rem */
   position: relative;         /* Grundlage für absolute Positionierung von Unterelementen */
 }
 
