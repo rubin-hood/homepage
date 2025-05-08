@@ -1,1 +1,20 @@
+body {
+  background-color: #f0f0f0; // oder jede gewünschte Farbe
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-logo img {
+  height: 50px;
+  width: auto;
+}
+
+.site-text {
+  display: flex;
+  flex-direction: column;
+}
 
