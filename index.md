@@ -1,7 +1,10 @@
 ---
 layout: home
-title: Willkommen
+title: Home
 ---
+
+Willkommen auf meiner Startseite.
+
 
 Der digitale Wald, in dem Kreativität und Technologie aufeinander treffen.
 
