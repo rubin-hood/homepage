@@ -5,12 +5,4 @@ plugins:
   - jekyll-feed
 
 
-navigation:
-  - title: Home
-    url: /
-  - title: Blog
-    url: /blog/
-  - title: About
-    url: /about/
-  - title: My Projects
-    url: /projects/
+
