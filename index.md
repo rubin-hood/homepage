@@ -1,8 +1,6 @@
 ---
 layout: home
-title: Blog
-title: About
-title: My Projects
+title: Home
 ---
 
 Willkommen auf meiner Startseite.
