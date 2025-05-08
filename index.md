@@ -1,6 +1,12 @@
 ---
 layout: home
 title: Home
+  - title: Blog
+    url: /blog/
+  - title: About
+    url: /about/
+  - title: My Projects
+    url: /projects/
 ---
 
 Willkommen auf meiner Startseite.
