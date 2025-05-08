@@ -25,7 +25,7 @@ body {
 /* Oberster Header-Bereich (Wrapper) */
 .site-header {
   border-top: none;           /* Kein Rahmen oben */
-  padding-top: 1.5rem;        /* Abstand vom oberen Rand der Seite */
+  padding-top: 0.5rem;        /* Abstand vom oberen Rand der Seite */
 }
 
 /* Wrapper für alle Header-Inhalte inkl. Navigation */
@@ -42,6 +42,10 @@ body {
 .site-logo {
   height: 100px;               /* Höhe des Logo-Containers */
   margin-right: 0.5rem;       /* Abstand zum nächsten Element */
+  margin: 0; /* Entfernt vertikalen Außenabstand */
+  padding: 0; /* Entfernt Innenabstand */
+}
+
 }
 
 /* Titel-Text (z. B. Webseitenname) neben dem Logo */
