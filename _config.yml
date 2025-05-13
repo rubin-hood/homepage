@@ -3,3 +3,6 @@ description: "© 2025 Rubin-Hood"
 theme: minima
 plugins:
   - jekyll-feed
+
+
+baseurl: "/homepage" # <- wichtig!
